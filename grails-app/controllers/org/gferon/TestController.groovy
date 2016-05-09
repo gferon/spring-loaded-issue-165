@@ -9,7 +9,7 @@ class TestController {
         Compiler compiler = new Compiler();
         Options options = new Options();
         def compiled = compiler.compileString("body { display: none; }", options)
-        render text: compiled
+        render text: compiled.css
     }
 
     def failWithoutLibrary() {
